@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="Id"
+        android:inputType="number"/>
+
+    <Spinner
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <Spinner
+        android:id="@+id/component"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         />
+    <EditText
+        android:id="@+id/donData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="false">
+    </EditText>
+    <Button
+        android:id="@+id/donationDataButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Изменить дату">
+    </Button>
+    <EditText android:id="@+id/conData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="false"/>
+    <Button
+        android:id="@+id/conserveDataButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Изменить дату">
+    </Button>
+
+    <Spinner
+        android:id="@+id/group"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         />
+
+    <Spinner
+        android:id="@+id/rh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+</LinearLayout>

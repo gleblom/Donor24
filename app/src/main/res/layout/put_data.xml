@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <EditText
+        android:id="@+id/donorIdText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ID донора"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        android:inputType="number">
+    </EditText>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/donorIdText"
+        android:layout_marginTop="20dp"
+        android:id="@+id/compSpinner">
+    </Spinner>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/compSpinner"
+        android:layout_marginTop="20dp"
+        android:id="@+id/grpSpinner"
+        >
+    </Spinner>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/grpSpinner"
+        android:layout_marginTop="20dp"
+        android:id="@+id/rhesusSpinner">
+    </Spinner>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
