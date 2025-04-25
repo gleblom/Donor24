@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="20dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/search_text"
+            android:layout_width="285dp"
+            android:layout_height="45dp"
+            android:hint="Поиск"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </EditText>
+
+        <TextView
+            android:id="@+id/newText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Поиск по совместимости крови/плазмы"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="@+id/search_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/componentSpinner">
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/search_button"
+            android:layout_width="85dp"
+            android:layout_height="45dp"
+            android:src="@drawable/car_ui_icon_search"
+            android:text="Поиск"
+            android:background="@drawable/car_ui_app_styled_view_ripple"
+            app:layout_constraintLeft_toRightOf="@id/search_text"
+            app:layout_constraintTop_toTopOf="parent">
+        </ImageButton>
+
+        <Spinner
+            android:id="@+id/componentSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/newText">
+        </Spinner>
+
+        <Spinner
+            android:id="@+id/groupSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/componentSpinner">
+
+        </Spinner>
+
+        <Spinner
+            android:id="@+id/rhSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/groupSpinner"
+            app:layout_constraintTop_toBottomOf="@+id/componentSpinner">
+        </Spinner>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</LinearLayout>

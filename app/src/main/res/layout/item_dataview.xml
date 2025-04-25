@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/Id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Id"
+        android:textSize="18sp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/Status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Статус"
+        android:textSize="18sp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/Component"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Компонент"
+        android:textSize="18sp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/donationData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Дата донации"
+        android:textSize="18sp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/conserveData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Дата консервации"
+        android:textSize="18sp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Группа крови"
+        android:textSize="18sp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/rh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Резус-фактор"
+        android:textSize="18sp">
+
+    </TextView>
+
+    <ImageButton
+        android:id="@+id/buttonEdit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="Редактировать"
+        android:src="@android:drawable/ic_menu_edit" />
+</LinearLayout>
