@@ -12,7 +12,8 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -20,11 +21,15 @@
 
             <EditText
                 android:id="@+id/searchText"
-                android:layout_width="match_parent"
+                android:layout_width="310dp"
                 android:layout_height="wrap_content"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:hint="Поиск">
+                android:hint="Поиск"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:lines="1"
+                android:singleLine="true">
 
             </EditText>
 
@@ -32,10 +37,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#00FFFFFF"
-                android:src="@android:drawable/ic_menu_search"
-                app:layout_constraintRight_toRightOf="@id/searchText"
-                app:layout_constraintTop_toTopOf="@id/searchText"
-                android:id="@+id/searchButton">
+                android:src="@drawable/car_ui_toolbar_search_search_icon"
+                app:layout_constraintLeft_toRightOf="@id/searchText"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/searchButton"
+                android:onClick="onSearchClick">
             </ImageButton>
 
             <TextView
@@ -81,7 +87,17 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-
     </androidx.core.widget.NestedScrollView>
+
+    <ImageButton
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:src="@android:drawable/ic_menu_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:onClick="onAddClick">
+    </ImageButton>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
