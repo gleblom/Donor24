@@ -32,7 +32,7 @@
         android:id="@+id/donationDataButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Изменить дату">
+        android:text="Изменить дату ">
     </Button>
     <EditText android:id="@+id/conData"
         android:layout_width="match_parent"
