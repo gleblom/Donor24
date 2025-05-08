@@ -20,6 +20,7 @@ public class SupabaseClient {
             Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl(SupabaseService.BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
+                    .client(client)
                     .build();
             instance = retrofit.create(SupabaseService.class);
         }

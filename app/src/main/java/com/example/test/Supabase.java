@@ -117,8 +117,7 @@ public class Supabase {
                         statuses[i] = s;
                         i++;
                     }
-                    ArrayAdapter<ItemModel> adapter = new
-                            ArrayAdapter<ItemModel>(context, android.R.layout.simple_spinner_dropdown_item, statuses);
+                    ItemModelAdapter adapter = new ItemModelAdapter(context, statuses);
                     spinner.setAdapter(adapter);
                     int position = adapter.getPosition(model);
                     spinner.setSelection(position);
@@ -316,8 +315,7 @@ public class Supabase {
 
                     }
                     Log.d(TAG, "Данные поулчены!" + response.body());
-                    ArrayAdapter<ItemModel> adapter =
-                            new ArrayAdapter<ItemModel>(context, android.R.layout.simple_spinner_dropdown_item, components);
+                    ItemModelAdapter adapter = new ItemModelAdapter(context,components);
                     spinner.setAdapter(adapter);
                     spinner.setSelection(2);
                 }
@@ -352,8 +350,7 @@ public class Supabase {
 
                     }
                     Log.d(TAG, "Данные поулчены!" + response.body());
-                    ArrayAdapter<ItemModel> adapter =
-                            new ArrayAdapter<ItemModel>(context, android.R.layout.simple_spinner_dropdown_item, groups);
+                    ItemModelAdapter adapter = new ItemModelAdapter(context,groups);
                     spinner.setAdapter(adapter);
                     spinner.setSelection(4);
 
@@ -389,8 +386,7 @@ public class Supabase {
 
                     }
                     Log.d(TAG, "Данные поулчены!" + response.body());
-                    ArrayAdapter<ItemModel> adapter =
-                            new ArrayAdapter<ItemModel>(context, android.R.layout.simple_spinner_dropdown_item, rhesuses);
+                    ItemModelAdapter adapter = new ItemModelAdapter(context, rhesuses);
                     spinner.setAdapter(adapter);
                     spinner.setSelection(2);
                 }
@@ -428,8 +424,7 @@ public class Supabase {
 
                     }
                     Log.d(TAG, "Данные поулчены!" + response.body());
-                    ArrayAdapter<ItemModel> adapter =
-                            new ArrayAdapter<ItemModel>(context, android.R.layout.simple_spinner_dropdown_item, components);
+                    ItemModelAdapter adapter = new ItemModelAdapter(context,components);
                     spinner.setAdapter(adapter);
                     int position = adapter.getPosition(model);
                     spinner.setSelection(position);
@@ -468,8 +463,7 @@ public class Supabase {
 
                     }
                     Log.d(TAG, "Данные поулчены!" + response.body());
-                    ArrayAdapter<ItemModel> adapter =
-                            new ArrayAdapter<ItemModel>(context, android.R.layout.simple_spinner_dropdown_item, groups);
+                    ItemModelAdapter adapter = new ItemModelAdapter(context, groups);
                     spinner.setAdapter(adapter);
                     int position = adapter.getPosition(model);
                     spinner.setSelection(position);
@@ -509,8 +503,7 @@ public class Supabase {
 
                     }
                     Log.d(TAG, "Данные поулчены!" + response.body());
-                    ArrayAdapter<ItemModel> adapter =
-                            new ArrayAdapter<ItemModel>(context, android.R.layout.simple_spinner_dropdown_item, rhesuses);
+                    ItemModelAdapter adapter = new ItemModelAdapter(context, rhesuses);
                     spinner.setAdapter(adapter);
                     int position = adapter.getPosition(model);
                     spinner.setSelection(position);

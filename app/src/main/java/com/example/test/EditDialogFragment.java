@@ -134,8 +134,8 @@ public class EditDialogFragment extends DialogFragment
         rhesus = (ItemModel)rhSpinner.getSelectedItem();
         String donationData = donationDataText.getText().toString();
         String conserveData = conservationData.getText().toString();
-        int id = Integer.parseInt(idText.getText().toString());
         if (!idText.getText().toString().isEmpty()) {
+                int id = Integer.parseInt(idText.getText().toString());
                 Map<String, Object> updateData = new HashMap<>();
                 updateData.put("updateid",  data.getUuid());
                 updateData.put("donorid", id);

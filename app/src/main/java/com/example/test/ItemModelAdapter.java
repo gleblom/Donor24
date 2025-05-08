@@ -10,8 +10,12 @@ import androidx.annotation.NonNull;
 import java.util.List;
 
 public class ItemModelAdapter extends android.widget.ArrayAdapter<ItemModel> {
-    public ItemModelAdapter(@NonNull Context context, List<ItemModel> statuses) {
-        super(context, android.R.layout.simple_spinner_dropdown_item, statuses);
+    public ItemModelAdapter(@NonNull Context context, ItemModel[] models) {
+        super(context, android.R.layout.simple_spinner_dropdown_item, models);
+        setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+    }
+    public ItemModelAdapter(@NonNull Context context, List<ItemModel> models) {
+        super(context, android.R.layout.simple_spinner_dropdown_item, models);
         setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
     }
     @Override
