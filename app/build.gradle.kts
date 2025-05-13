@@ -1,6 +1,10 @@
+import java.util.*
 plugins {
     alias(libs.plugins.android.application)
+    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin").version("2.0.1")
+
 }
+
 
 android {
     namespace = "com.example.test"
@@ -15,6 +19,9 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
+    buildFeatures {
+        buildConfig = true
+    }
 
     buildTypes {
         release {
@@ -22,7 +29,10 @@ android {
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
+
             )
+            signingConfig = signingConfigs.getByName("debug")
+
         }
     }
     compileOptions {

@@ -14,9 +14,7 @@ public interface SupabaseService
     //URL проекта
     String BASE_URL = "https://jjyjaahtlyokojguaxji.supabase.co/rest/v1/";
     // API-ключ
-    String API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpqeWphYWh0bHlva29qZ3VheGppIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzgxNDYyODIsImV4cCI6MjA1MzcyMjI4Mn0.tbThAofXtRa-7ULUnmXQLOEvLKFxuiYR9LU_tQyl8dQ";
-
-    // Заголовок запроса (ОБЯЗАТЕЛЬНО)
+    String API_KEY = BuildConfig.SUPABASE_API_KEY;
     @Headers({
             "apikey: " + API_KEY,
             "Authorization: Bearer " + API_KEY,
@@ -90,12 +88,12 @@ public interface SupabaseService
     })
     @POST("rpc/getGroups")
     Call<List<Map<String, Object>>> getGroups();
+    @POST("rpc/getRhesuses")
     @Headers({
             "apikey: " + API_KEY,
             "Authorization: Bearer " + API_KEY,
             "Content-Type: application/json"
     })
-    @POST("rpc/getRhesuses")
     Call<List<Map<String, Object>>> getRhesuses();
     @Headers({
             "apikey: " + API_KEY,
