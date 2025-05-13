@@ -23,6 +23,7 @@ supabaseKt = "1.2.0"
 supabaseKtAndroid = "3.0.0"
 carUiLib = "2.6.0"
 espressoContrib = "3.6.1"
+roomCompiler = "2.7.1"
 
 [libraries]
 auth-kt = { module = "io.github.jan-tennert.supabase:auth-kt", version.ref = "supabaseKtAndroid" }
@@ -55,6 +56,7 @@ supabase-supabase-android = { module = "org.supabase:supabase-android", version.
 car-ui-lib = { group = "com.android.car.ui", name = "car-ui-lib", version.ref = "carUiLib" }
 test-rules = { module = "androidx.test:rules", version.ref = "core" }
 espresso-contrib = { group = "androidx.test.espresso", name = "espresso-contrib", version.ref = "espressoContrib" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "roomCompiler" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
